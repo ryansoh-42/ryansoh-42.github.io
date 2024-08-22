@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Justin Bieber Fan Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f0f0f0; /* Light grey background */
+            color: #333; /* Dark grey text */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            transition: background 0.5s ease;
+        }
+        header {
+            background: #333; /* Dark grey background */
+            color: #fff; /* White text */
+            padding: 15px 20px;
+            text-align: center;
+            width: 100%;
+            transition: background 0.5s ease;
+        }
+        footer {
+            background-color: #222; /* Minimal black */
+            color: #fff; /* White text */
+            padding: 15px 20px;
+            text-align: center;
+            width: 100%;
+            margin-top: auto;
+        }
+        header h1, footer p {
+            margin: 0;
+        }
+        nav {
+            margin: 10px 0;
+        }
+        nav a {
+            color: #ddd; /* Light grey for text */
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: normal;
+            display: inline-block;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+        nav a:hover {
+            color: #fff; /* White text on hover */
+            transform: scale(1.05); /* Slightly enlarge the link */
+        }
+        .main-container {
+            display: flex;
+            flex: 1;
+        }
+        .sidebar {
+            background-color: #e0e0e0; /* Light grey */
+            width: 250px;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .sidebar h2 {
+            font-size: 20px;
+            margin-bottom: 20px;
+            color: #333; /* Dark grey */
+        }
+        .sidebar .video {
+            margin-bottom: 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .sidebar .video img {
+            width: 100%;
+            border-radius: 8px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .sidebar .video:hover img {
+            transform: scale(1.02); /* Slightly enlarge the thumbnail */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow on hover */
+        }
+        .sidebar .video a {
+            color: #333; /* Dark grey */
+            text-decoration: none;
+            font-size: 16px;
+            display: block;
+            margin-top: 10px;
+            transition: color 0.3s ease;
+        }
+        .sidebar .video a:hover {
+            color: #000; /* Black text on hover */
+        }
+        .main-content {
+            padding: 20px;
+            flex: 1;
+            background: #fff; /* White background for main content */
+        }
+        .description {
+            padding: 20px;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .description h2 {
+            font-size: 22px;
+            margin-bottom: 15px;
+            color: #333; /* Dark grey */
+        }
+        .description p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #555; /* Medium grey */
+        }
+        .tour-dates {
+            margin-top: 30px;
+            text-align: left;
+        }
+        .tour-dates h3 {
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: #333; /* Dark grey */
+        }
+        .tour-dates ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        .tour-dates li {
+            margin-bottom: 15px;
+            font-size: 16px;
+            color: #555; /* Medium grey */
+        }
+        .tour-dates li span {
+            display: block;
+            font-weight: bold;
+        }
+        .tour-dates a {
+            color: #333; /* Dark grey */
+            text-decoration: none;
+            font-weight: normal;
+            transition: color 0.3s ease;
+        }
+        .tour-dates a:hover {
+            color: #000; /* Black text on hover */
+        }
+        .countdown {
+            padding: 20px;
+            text-align: center;
+            background: #eee; /* Light grey */
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+            margin-top: 20px;
+        }
+        .countdown h2 {
+            font-size: 24px;
+            color: #333; /* Dark grey */
+            margin-bottom: 10px;
+        }
+        .countdown p {
+            font-size: 18px;
+            color: #666; /* Medium grey */
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+        .gallery img {
+            margin: 10px;
+            border-radius: 8px;
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .gallery img:hover {
+            transform: scale(1.05); /* Slightly enlarge the image */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow on hover */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Dynamic Header -->
+    <header>
+        <h1>Welcome to Justin Bieber's World</h1>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#tours">Live Tours</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <div class="main-container">
+        <!-- Sidebar with YouTube Videos -->
+        <div class="sidebar">
+            <h2>Top Hits on YouTube</h2>
+            <div class="video">
+                <img src="justinbaby.jpeg" alt="Justin Bieber - Baby">
+                <a href="https://www.youtube.com/watch?v=kffacxfA7G4&pp=ygUNanVzdGluIGJpZWJlcg%3D%3D" target="_blank">Justin Bieber - Baby</a>
+            </div>
+            <div class="video">
+                <img src="justinghost.jpeg" alt="Justin Bieber - Ghost">
+                <a href="https://www.youtube.com/watch?v=Fp8msa5uYsc&pp=ygUNanVzdGluIGJpZWJlcg%3D%3D" target="_blank">Justin Bieber - Peaches</a>
+            </div>
+            <div class="video">
+                <img src="justinstay.jpeg" alt="Justin Bieber - Stay">
+                <a href="https://www.youtube.com/watch?v=kTJczUoc26U&pp=ygUNanVzdGluIGJpZWJlcg%3D%3D" target="_blank">Justin Bieber - Stay</a>
+            </div>
+        </div>
+
+        <!-- Main Content Area -->
+        <div class="main-content">
+            <!-- Countdown Section -->
+            <div class="countdown" id="countdown">
+                <h2>Countdown to Next Tour</h2>
+                <p id="countdown-timer"></p>
+            </div>
+
+            <!-- Description Section -->
+            <div class="description" id="tours">
+                <h2>Justin Bieber's Live Tours</h2>
+                <p>Justin Bieber has captivated audiences worldwide with his electrifying live performances. From his early tours like "My World" to the global phenomenon "Purpose World Tour," and most recently the "Changes Tour," each has left an indelible mark on pop culture. Fans are treated to spectacular stage designs, innovative choreography, and Bieber's signature vocal prowess. Whether performing in intimate venues or massive stadiums, his concerts are unforgettable experiences that continue to define his evolution as an artist.</p>
+
+                <!-- Tour Dates Section -->
+                <div class="tour-dates">
+                    <h3>Upcoming Live Tours</h3>
+                    <ul>
+                        <li>
+                            <span>September 15, 2024 - Madison Square Garden, New York, NY, 8:00 PM</span>
+                            <a href="#" target="_blank">Buy Ticket Now</a> | <a href="#" target="_blank">More Info</a>
+                        </li>
+                        <li>
+                            <span>October 7, 2024 - United Center, Chicago, IL, 7:00 PM</span>
+                            <a href="#" target="_blank">Buy Ticket Now</a> | <a href="#" target="_blank">More Info</a>
+                        </li>
+                        <li>
+                            <span>November 20, 2024 - Staples Center, Los Angeles, CA, 9:00 PM</span>
+                            <a href="#" target="_blank">Buy Ticket Now</a> | <a href="#" target="_blank">More Info</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Gallery Section -->
+            <div class="gallery" id="gallery">
+                <img src="justin1.jpg" alt="Justin Bieber Photo 1">
+                <img src="justin2.jpg" alt="Justin Bieber Photo 2">
+                <img src="justin3.jpg" alt="Justin Bieber Photo 3">
+                <img src="justin4.jpg" alt="Justin Bieber Photo 4">
+                <img src="justin5.jpg" alt="Justin Bieber Photo 5">
+                <img src="justin6.jpg" alt="Justin Bieber Photo 6">
+            </div>
+        </div>
+    </div>
+
+    <!-- Dynamic Footer -->
+    <footer>
+        <p>&copy; 2024 Justin Bieber Fan Page. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript for Countdown Timer and Image Modal -->
+    <script>
+        // Countdown Timer
+        function updateCountdown() {
+            const nextTourDate = new Date('September 15, 2024 20:00:00').getTime(); // Update this to the next tour date
+            const now = new Date().getTime();
+            const timeDiff = nextTourDate - now;
+            
+            const days = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((timeDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((timeDiff % (1000 * 60)) / 1000);
+            
+            document.getElementById('countdown-timer').innerHTML =
+                `${days}d ${hours}h ${minutes}m ${seconds}s`;
+            
+            if (timeDiff < 0) {
+                clearInterval(countdownInterval);
+                document.getElementById('countdown-timer').innerHTML = "The event has started!";
+            }
+        }
+
+        const countdownInterval = setInterval(updateCountdown, 1000);
+        updateCountdown(); // Initial call
+
+        // Image Modal
+        document.querySelectorAll('.gallery img').forEach(img => {
+            img.addEventListener('click', function() {
+                const modal = document.createElement('div');
+                modal.style.position = 'fixed';
+                modal.style.top = '0';
+                modal.style.left = '0';
+                modal.style.width = '100%';
+                modal.style.height = '100%';
+                modal.style.backgroundColor = 'rgba(0, 0, 0, 0.8)';
+                modal.style.display = 'flex';
+                modal.style.alignItems = 'center';
+                modal.style.justifyContent = 'center';
+
+                const modalImg = document.createElement('img');
+                modalImg.src = this.src;
+                modalImg.style.maxWidth = '90%';
+                modalImg.style.maxHeight = '90%';
+                modalImg.style.borderRadius = '8px';
+
+                modal.appendChild(modalImg);
+                document.body.appendChild(modal);
+
+                modal.addEventListener('click', function() {
+                    document.body.removeChild(modal);
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
